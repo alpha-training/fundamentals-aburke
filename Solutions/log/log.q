@@ -8,3 +8,5 @@ error:{[msg] print["ERROR";msg]}
 
 / process 1
 \p 1234
+q .\log.q -p 1234 /run in PowerShell
+
