@@ -33,3 +33,27 @@ myCloseFunc:{-1"Handle closed on ",string x;}
 .event.addHandler[`.z.po;`myOpenFunc1]
 .event.addHandler[`.z.po;`myOpenFunc2]
 .event.addHandler[`.z.pc;`myCloseFunc]
+
+// PETER'S COMMENTS
+
+Phenomenal job - this one's tricky and your solution works great!
+
+An improvement that doesnt use the "if/else" $ is suggested here:
+
+addHandler2:{[event;handler] 
+    handlers[event]:handlers[event] union handler;
+    event set fire event;
+    }
+
+
+And an even shorter one using @ (See apply-catch-amend):
+
+addHandler3:{[event;handler] 
+    @[`.event.handlers;event;union;handler];
+    event set fire event;
+    }
+
+
+Your fire function is optimal, I'd just get rid of the whitespace and put it on 1 line:
+
+fire:{[event;arg] handlers[event]@\:arg}
