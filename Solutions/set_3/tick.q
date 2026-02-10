@@ -21,9 +21,6 @@ sub:{[t] $[11=type t;.z.s each t;w[t]:distinct w[t],.z.w]}
 \d .
 
 
-
-
-
 / use this to tutn lists to col dict LIST_OF_SYMS!COLUMN_LISTS
 / use this in the terminal: q tick.q -e 1
 

@@ -36,8 +36,7 @@ genQuote:{
   .u.pub[`quote;.u.genQuote`];
  }
 		
-t\ 1000
-
+\t 1000
 
 
 
