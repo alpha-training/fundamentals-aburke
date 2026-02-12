@@ -16,3 +16,5 @@ q ipc.q
 .ipc.conn`server1
 / the handle columns should be all nulls again if your .z.pc event fired
 
+.ipc.conn`server2
+.ipc.conns

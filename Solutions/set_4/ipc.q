@@ -7,8 +7,8 @@ conns:1!flip`name`port`handle!"sji"$\:()
 
 conn:{[name]
       if[not null h:conns[name;`handle];:h];
-      if[not null h:tryConnect conns[name;`port];
-      update handle:h from `.ipc.conns where name=name;
+      target:name;h:tryConnect[conns[name;`port]];
+      if[not null h;update handle:h from `.ipc.conns where name=target;
       :h];h}
 
 tryConnect:{[port]@[hopen;port;{0Ni}]}
