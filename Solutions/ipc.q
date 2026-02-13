@@ -1,5 +1,5 @@
 / Inter-process communication
-\l ../set_2/event.q
+\l event.q
 	
 \d .ipc
 
