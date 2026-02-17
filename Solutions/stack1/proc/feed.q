@@ -13,8 +13,3 @@ pub:{[t;d]neg[h](`.u.upd;t;d)}
 
 \t 100
 
-
-/
-Before review had this for genTrade (and similar for genQuote) function:
-{N:1+rand 1000;(N#.z.p;N?SYMS;N?1000j;N?100f)}
-
