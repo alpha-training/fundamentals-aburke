@@ -18,4 +18,4 @@ endofday:{eod:.z.d-1;-1"Triggering EOD for date ", string eod;u_h:distinct (),ra
 
 \d .
 .u.endofdayPub:{.u.endofday[.z.d-1]}
-.cron.add[`.u.endofdayPub; .z.p+00:00:10; 0D00:01:00]
+.cron.add[`.u.endofdayPub; .z.p+00:00:20; 0D00:01:00]

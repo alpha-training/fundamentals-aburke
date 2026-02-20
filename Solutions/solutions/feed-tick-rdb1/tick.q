@@ -10,16 +10,12 @@ upd:{[t;x] $[type x;"this must be a list of lists";neg[w t]@\:(`upd;t;flip COLS_
 
 w:(key COLS_DICT)!count[key COLS_DICT]#()
 
-sub:{[t] $[11=type t;.z.s each t;[w[t]:distinct w[t],.z.w;(t;COLS_DICT t)]]}
-
+sub:{[t] if[t~`;t:key COLS_DICT];$[11=type t;.z.s each t;[w[t]:distinct (),w[t],.z.w;(t;COLS_DICT t)]]}
+type each .u.w
 .z.pc:{w::w except'x}
 
 \d .
 
 
-/
-Before review had this for upd function:
-upd:{[t;x]
- if[type x;'"this must be a list of lists"];
- a: flip COLS_DICT[t]!x;  
- (neg w t)@\:(`upd;t;a);}
+
+select func, lastRun, nextRun, error from .cron.jobs
