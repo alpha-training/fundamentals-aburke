@@ -12,5 +12,3 @@ pub:{[t;d]neg[h](`.u.upd;t;d)}
 .z.ts:{pub'[`trade`quote;(genTrade[];genQuote[])]}
 
 \t 100
-
-
