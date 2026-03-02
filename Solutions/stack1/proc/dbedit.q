@@ -1,6 +1,6 @@
 allcols:{[tabledir] get hsym`$(string tabledir),"/.d"};
 
-addCol:{[tabledir;colname;defaultvalue] 
+add1Col:{[tabledir;colname;defaultvalue] 
     tabledir:hsym`$string tabledir; 
     colsInDir:allcols tabledir;
     if[not colname in colsInDir; 
@@ -12,7 +12,7 @@ addCol:{[tabledir;colname;defaultvalue]
     ];
  };
 
-delCol:{[tabledir;col]
+del1Col:{[tabledir;col]
     tabledir:hsym`$string tabledir; 
     colsInDir:allcols tabledir; 
 
@@ -24,3 +24,7 @@ delCol:{[tabledir;col]
     ];
  };
 
+
+/ allcols`:db/2025.09.01/trade
+/ add1col[`:db/2025.09.01/trade;`volume;0N]
+/ delete1col[`:db/2025.09.01/trade;`volume]
